@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.home__layout {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 1rem;
+}

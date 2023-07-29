@@ -1,0 +1,37 @@
+footer {
+  padding-block: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #323232;
+  color: white;
+}
+
+footer > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#react {
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.git__link > a {
+  text-decoration: none;
+  color: white;
+}
+
+#github {
+  width: 1.5rem;
+}

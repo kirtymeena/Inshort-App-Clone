@@ -1,0 +1,53 @@
+.downloadMsg {
+  display: none;
+}
+
+#google-play {
+  width: 32px;
+  height: 32px;
+  padding-left: 0.3rem;
+}
+
+.icon__text {
+  position: absolute;
+  /* border:2px solid green; */
+  width: 6rem;
+  line-height: 1.2rem;
+  margin-left: 0.6rem;
+}
+.playstore__icon {
+  background-color: #43434c;
+  width: 9rem;
+  padding-block: 0.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.news__stack > div:first-child {
+  margin-top: 2rem;
+}
+.news__stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.load__btn {
+  display: flex;
+  justify-content: center;
+  padding-block:2rem;
+}
+
+@media (min-width: 768px) {
+  .downloadMsg {
+    background-color: #f44336;
+    color: white;
+    font-weight: 300;
+    padding: 0.4rem;
+    padding-inline: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
