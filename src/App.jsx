@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import NavCustom from "./components/NavCustom/NavCustom"
-import { API_KEY } from "./data/config"
+// import { API_KEY } from "./data/config"
 import axios from "axios"
 import NewsContent from "./components/NewsContent/NewsContent"
 import Footer from "./components/Footer/Footer"
 import "./css/common.css"
 
+const API_KEY = import.meta.env.VITE_ACCESS_KEY
 function App() {
   // eslint-disable-next-line no-unused-vars
   const [category, setCategory] = useState("General")
@@ -42,7 +43,7 @@ function App() {
   }
   useEffect(() => {
     newsApi()
-  }, [newsResults.length, limit,category])
+  }, [newsResults.length, limit, category])
 
 
 
