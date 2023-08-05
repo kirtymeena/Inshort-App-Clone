@@ -4,7 +4,7 @@ import { Container } from "@mui/material"
 import NewsCard from "../NewsCard/NewsCard"
 import { Button } from "@mui/material"
 
-function NewsContent({ newsResults, limit, totalContent, setLimit }) {
+function NewsContent({ newsResults, limit, setLimit }) {
     console.log("result", newsResults)
     return (
         <Container maxWidth='md'>
@@ -33,7 +33,7 @@ function NewsContent({ newsResults, limit, totalContent, setLimit }) {
             </div>
             <div className="load__btn">
                 {
-                    limit < totalContent &&
+                    limit  &&
                     <Button disabled={newsResults.length < limit} variant="contained" sx={{ backgroundColor: "white", color: "black" }} onClick={() => setLimit(prev => prev + 30)}>Load More</Button>
                 }
             </div>

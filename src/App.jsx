@@ -13,26 +13,36 @@ function App() {
   const [limit, setLimit] = useState(30)
   const [totalContent, setTotalContent] = useState(0)
 
+  // const newsApi = async () => {
+  //   try {
+  //     const news = await axios.get(`http://api.mediastack.com/v1/news?access_key=${API_KEY}&limit=${limit}&sort=published_desc& &categories=${category.toLowerCase()}`, {
+  //       languages: 'fr,-en',
+  //       countries: 'in,us',
+  //     })
+
+  //     console.log(news.data)
+  //     setNewsResults(news.data.data)
+  //     setTotalContent(news.data.pagination.total)
+  //   } catch (err) {
+  //     console.log(err)
+
+  //   }
+  // }
   const newsApi = async () => {
     try {
-      const news = await axios.get(`http://api.mediastack.com/v1/news?access_key=${API_KEY}&limit=${limit}&sort=published_desc& &categories=${category.toLowerCase()}`, {
-        languages: 'fr,-en',
-        countries: 'in,us',
-      })
-
-      console.log(news.data)
-      setNewsResults(news.data.data)
-      setTotalContent(news.data.pagination.total)
-      // const
-    } catch (err) {
-      console.log(err)
-      // alert("Unable to load content")
-      // window.location.reload()
+      const news = await axios.get(`https://api.nytimes.com/svc/news/v3/content/nyt/${category}.json/?limit=${limit}&api-key=${API_KEY}`)
+      console.log("data", news.data.results)
+      setNewsResults(news.data.results);
+      setTotalContent(news.data.num_results)
+      setTotalContent(news.data.num_results)
+    }
+    catch (err) {
+      console.log("err", err)
     }
   }
   useEffect(() => {
     newsApi()
-  }, [newsResults.length, category, limit])
+  }, [newsResults.length, limit,category])
 
 
 

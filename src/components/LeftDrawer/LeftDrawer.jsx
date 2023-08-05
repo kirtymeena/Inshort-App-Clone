@@ -58,7 +58,7 @@ export default function TemporaryDrawer({ setCategory, category }) {
                 <Divider />
 
                 {categories.map((text) => (
-                    <ListItem key={text} onClick={() => setCategory(text)} style={{
+                    <ListItem key={text} onClick={() => setCategory(text==="General"?"all":text)} style={{
                         backgroundColor: text === category ? "#71717a" : "", borderRadius: "4px"
                     }}>
                         <ListItemButton>
